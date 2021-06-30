@@ -1,0 +1,15 @@
+1. Instalar modulos de sistema
+npm i express express-handlebars express-session method-override mongoose passport passport-local bcryptjs connect-flash //Con módulo para conectar con mongodb
+npm i express express-handlebars express-session method-override mssql passport passport-local bcryptjs connect-flash //Con módulo para conectar con sql server
+
+2. Ubicarse en src 
+cd src
+
+3. Crear carpetas
+mkdir config, helpers, models, public, routes, views
+
+4. Instalar modulo para controlar reinicios del server
+npm i nodemon -D
+
+5. Conexion con git - Your authorization token:
+vscode://vscode.github-authentication/did-authenticate?windowid=1&code=749c6160096e9dccd71c&state=c83fa921-ec49-4a0e-a0d1-98fff37095ab
