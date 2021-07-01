@@ -13,3 +13,6 @@ npm i nodemon -D
 
 5. Conexion con git - Your authorization token:
 vscode://vscode.github-authentication/did-authenticate?windowid=1&code=749c6160096e9dccd71c&state=c83fa921-ec49-4a0e-a0d1-98fff37095ab
+
+Seguir desde acá
+https://youtu.be/-bI0diefasA?list=PLae0C2NdoNAg-cTt9l2LunKBDKc-XPvBP&t=4173
