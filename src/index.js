@@ -6,6 +6,7 @@ const session = require('express-session');
 
 // Initializations
 const app = express();
+require('./databaseSQL');
 
 // Settings
 app.set('port', process.env.PORT || 3000);
