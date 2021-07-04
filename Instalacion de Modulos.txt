@@ -15,4 +15,9 @@ npm i nodemon -D
 vscode://vscode.github-authentication/did-authenticate?windowid=1&code=749c6160096e9dccd71c&state=c83fa921-ec49-4a0e-a0d1-98fff37095ab
 
 Seguir desde acá
-https://youtu.be/-bI0diefasA?list=PLae0C2NdoNAg-cTt9l2LunKBDKc-XPvBP&t=4173
+https://youtu.be/-bI0diefasA?list=PLae0C2NdoNAg-cTt9l2LunKBDKc-XPvBP&t=4380
+
+
+Cuando se clone el proyecto desde git hay que instalar los modulos porque tienen que estar registrados en cada ambiente.
+npm install npm -g.
+npm install
