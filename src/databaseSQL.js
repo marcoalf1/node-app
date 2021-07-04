@@ -13,7 +13,8 @@ const msSQL = require("mssql/msnodesqlv8");
 //   module.export = dbConfig */
 
 const dbConfig = {
-    server: 'DIIN-MAHERNANDE\\SQLDEV2016',
+    //server: 'DIIN-MAHERNANDE\\SQLDEV2016',
+    server: 'LAPTOP-SER97\\SQLEXPRESS2016',
     port: 1433,
     database: 'Northwind',
     driver: "msnodesqlv8",
