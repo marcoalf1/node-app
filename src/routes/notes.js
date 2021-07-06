@@ -21,12 +21,10 @@ router.post('/notes/new-note', (req, res) => {
             title,
             description
         });
-
+    } else {
+        res.send('Ok');
     }
-
-
-
-    res.send('Ok');
+    
 });
 
 router.get('/notes', (req, res) => {
