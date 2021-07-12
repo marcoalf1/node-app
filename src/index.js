@@ -6,7 +6,8 @@ const session = require('express-session');
 
 // Initializations
 const app = express();
-require('./databaseSQL');
+//require('./databaseSQL');
+require('./databaseMongo');
 
 // Settings
 app.set('port', process.env.PORT || 3000);
