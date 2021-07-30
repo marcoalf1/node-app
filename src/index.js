@@ -17,6 +17,10 @@ app.set('port', process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'views'));
 app.engine('.hbs', exphbs({
     defaultLayout:'main',
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true
+    },
     layoutsDir: path.join(app.get('views'),'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs'
@@ -40,6 +44,7 @@ app.use((req, res, next) =>{
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
+    res.locals.user = req.user || null;
     next();
 })
 
