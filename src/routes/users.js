@@ -17,9 +17,9 @@ router.get('/users/signup', (req,res)=>{
 });
 
 router.post('/users/signup', async(req,res)=>{
-    //res.render('users/signup');
-    const{name, email, password, confirmPassword} = req.body;
+    const {name, email, password, confirmPassword} = req.body;
     const errors = [];
+    console.log(req.body);
     if (name.length <= 0) {
         errors.push({text:'Please insert your Name'});
     }
@@ -34,18 +34,21 @@ router.post('/users/signup', async(req,res)=>{
     } 
     else {
         const emailUser = await User.findOne({email:email}); //.lean();
-        console.log(email);
-        console.log(emailUser);
+        console.log('email-> ', email);
+        console.log('emailUSer-> ', emailUser);
         if (emailUser) {
-            req.flash('error_msg','The Email is already in use');
-            /// res.redirect('users/signup',{errors, name, email, password,confirmPassword});
-            res.redirect('/users/signup');
+            //req.flash('error_msg','The Email is already in use');
+            errors.push({text: 'The Email is already in use'});
+            res.render('users/signup',{errors,name, email, password, confirmPassword});
+            //res.redirect('/users/signup',{name, email, password, confirmPassword});
         }
-        const newUser = new User({name, email, password});
-        newUser.password = await newUser.encryptPassword(password);
-        await newUser.save();
-        req.flash('success_msg','You are registered');
-        res.redirect('/users/signin');
+        else{
+            const newUser = new User({name, email, password});
+            newUser.password = await newUser.encryptPassword(password);
+            await newUser.save();
+            req.flash('success_msg','You are registered');
+            res.redirect('/users/signin');
+        }
     }
 });
 
